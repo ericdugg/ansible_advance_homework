@@ -7,8 +7,10 @@
 - name: Install openstacksdk library
   pip:
     name: openstacksdk
-    state: latest
-    extra_args: -U
+#    state: latest
+#    extra_args: -U
+    state: present
+    version: 0.39.0
 - name: Create clouds.yaml file
   blockinfile:
     create: yes
